@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: feapp-cluster-service
+  namespace: fullstack
+spec:
+  selector:
+    app: feapp
+  ports:
+    - port: 3050
+      targetPort: 3050
+  type: ClusterIP

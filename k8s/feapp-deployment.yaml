@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: feapp
+  namespace: fullstack
+spec:
+  selector:
+    matchLabels:
+      app: feapp
+  template:
+    metadata:
+      labels:
+        app:  feapp
+    spec:
+      containers:
+        - name: feapp
+          image: lgumpina/feapp
+          ports:
+            - containerPort:  3050
